@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Five Finger LED</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #2a1b21;
+      color: #fff3ee;
+      font-family: Georgia, serif;
+    }
+
+    main {
+      width: min(980px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 24px 0;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 2rem;
+    }
+
+    .info {
+      color: #f4cbc8;
+      max-width: 640px;
+      line-height: 1.4;
+    }
+
+    .row {
+      /* husk at sæt kamera og status ved siden af hinanden på computeren. */
+      display: grid;
+      grid-template-columns: 640px 1fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    #kameraHold canvas {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .side {
+      background: #fff3ee;
+      color: #281a1d;
+      padding: 14px;
+      border-radius: 8px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border: 0;
+      border-radius: 6px;
+      background: #54d678;
+      color: #12391f;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:disabled { opacity: 0.7; }
+
+    .status { color: #725b62; margin: 10px 0; }
+
+    .box {
+      background: #f9d9dd;
+      padding: 8px;
+      border-radius: 6px;
+      margin: 6px 0;
+    }
+
+    #ledStatus[data-on="true"] {
+      background: #d9f8dc;
+      font-weight: bold;
+    }
+
+    @media (max-width: 860px) {
+      .row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Five Finger LED</h1>
+    <p class="info">
+      Webcam tæller fingre. Fem fingre sender 1 til Arduino og tænder den grønne LED.
+    </p>
+
+    <div class="row">
+      <!-- Der bliver sat canvas herfordi at p5 selv putter canvas ind i den. -->
+      <div id="kameraHold"></div>
+
+      <!-- Sideboks ind, så man kan se om Arduino er blevet forbundet. -->
+      <div class="side">
+        <button id="connectArduino">Forbind Arduino</button>
+        <p class="status" id="serialStatus">Ikke forbundet endnu.</p>
+        <div class="box" id="fingerStatus">Fingre: 0</div>
+        <div class="box" id="ledStatus" data-on="false">LED: 0 / slukket</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Loader p5 først, fordi min egen p5kode bruger createCanvas og bruger draw. -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/p5.min.js"></script>
+
+  <!-- såloader ml5 bagefter fordi handPose kommer fra ml5 biblioteket. -->
+  <script src="https://cdn.jsdelivr.net/npm/ml5@1/dist/ml5.min.js"></script>
+
+  <!-- Mine egne filer er delt op i: hånd, Arduino og selve p5-sketch. -->
+  <script src="finger-hand.js"></script>
+  <script src="finger-arduino.js"></script>
+  <script src="finger-led.js"></script>
+</body>
+</html>
