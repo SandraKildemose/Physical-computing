@@ -108,3 +108,5 @@ function opdaterHtmlBokse() {
 // . codex-test-physical-02
 
 // . codex-test-physical-03
+
+// . codex-test-physical-04
