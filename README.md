@@ -16,3 +16,5 @@ Dette projekt er lavet selv. Jeg har faaet hjaelp til debug undervejs, men det e
 Projektet er lagt op som en lokal faerdig version med kode og video, saa processen og resultatet kan ses samlet.
 
 Projektet er bygget lokalt og har undervejs vaeret gemt paa en ekstern harddisk. Derfor afspejler GitHub-repository'et ikke hele den lokale udviklingshistorik med mange commits, men fungerer som en samlet upload af den faerdige version.
+
+.
