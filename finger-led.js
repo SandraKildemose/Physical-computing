@@ -103,62 +103,32 @@ function opdaterHtmlBokse() {
   ledBox.dataset.on = ledOn ? "true" : "false";
 }
 
-// . codex-test-physical-01
 
-// . codex-test-physical-02
 
-// . codex-test-physical-03
 
-// . codex-test-physical-04
 
-// . codex-test-physical-05
 
-// . codex-test-physical-06
 
-// . codex-test-physical-07
 
-// . codex-test-physical-08
 
-// . codex-test-physical-09
 
-// . codex-test-physical-10
 
-// . codex-test-physical-11
 
-// . codex-test-physical-12
 
-// . codex-test-physical-13
 
-// . codex-test-physical-14
 
-// . codex-test-physical-15
 
-// . codex-test-physical-16
 
-// . codex-test-physical-17
 
-// . codex-test-physical-18
 
-// . codex-test-physical-19
 
-// . codex-test-physical-20
 
-// . codex-test-physical-21
 
-// . codex-test-physical-22
 
-// . codex-test-physical-23
 
-// . codex-test-physical-24
 
-// . codex-test-physical-25
 
-// . codex-test-physical-26
 
-// . codex-test-physical-27
 
-// . codex-test-physical-28
 
-// . codex-test-physical-29
 
-// . codex-test-physical-30
