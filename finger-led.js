@@ -112,3 +112,5 @@ function opdaterHtmlBokse() {
 // . codex-test-physical-04
 
 // . codex-test-physical-05
+
+// . codex-test-physical-06
