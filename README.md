@@ -18,3 +18,4 @@ Projektet er lagt op som en lokal faerdig version med kode og video, saa process
 Projektet er bygget lokalt og har undervejs vaeret gemt paa en ekstern harddisk. Derfor afspejler GitHub-repository'et ikke hele den lokale udviklingshistorik med mange commits, men fungerer som en samlet upload af den faerdige version.
 
 .
+.
