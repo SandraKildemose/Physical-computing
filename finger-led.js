@@ -102,3 +102,5 @@ function opdaterHtmlBokse() {
   // Data on til CSS så boksen kan skifte farve når LED er tændt.
   ledBox.dataset.on = ledOn ? "true" : "false";
 }
+
+// . codex-test-physical-01
